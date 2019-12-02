@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Day of the 42</title>
+		<link href="doft.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="top">
+			<img id="img_on_top" src="resources/day_of_the_42.png" alt="Welcome!" title="Welcome!">
+			<img id="loop" src="resources/loupe.png" alt="Loop" title="Loupe">
+			<a href="http://www.disney.com">
+				<img class="refresh_disney" src="resources/reload.png"
+				alt="Start from the beginning" title="Start from the beginning">
+			</a>
+			<a href="http://www.relaischateaux.com">
+				<img class="refresh_disney" src="resources/close.gif"
+				style="margin-top: 80px;"
+				alt="Disconnect" title="Disconnect">
+			</a>
+		</div>
+		<div class="middle">
+			<div class="grayBlock lblock">
+				<img src="resources/arrow.png" id="hand" title="Advance" alt="Advance"/>
+				<img src="resources/main.png" id="hand" title="Take" alt="Take"/>
+				<img src="resources/oeil.png"  id="handSelected" title="Look" alt="Look"/>
+				<img src="resources/outil.png" id="hand" title="Use" alt="Use"/>
+				<img src="resources/chat-icon.png" id="hand" title="Speak" alt="Speak"/>
+			</div>
+			<div class="grayBlock content">
+				<img src="resources/cluster.jpg" alt="cluster" usemap="#map">
+				<map name="Map" id="map">
+					<area alt="mac" title="Mac" href="http://www.apple.com" shape="poly" coords="792,425,791,318,796,312,972,327,978,337,974,454,969,463,902,444,901,457,912,462,906,481,842,466,845,447,848,449,852,433" />
+					<area alt="chaise" title="Armchair" href="http://www.ikea.com" shape="poly" coords="406,394,436,382,450,387,450,388,451,392,421,393,422,402,440,412,456,416,430,427,432,438,438,445,436,453,425,447,413,455,403,457,395,451,398,478,404,470,414,476,412,479,461,488,465,501,456,501,457,490,401,485,427,528,430,541,420,542,420,529,397,501,300,512,392,513,389,492,341,528,345,537,340,541,337,541,331,536,337,521,382,483,346,492,345,500,331,500,339,484,388,474,391,457,380,451,353,442,341,435,345,392,344,376,325,331,330,322,360,328,391,339,403,358,403,391," />
+				</map>
+			</div>
+			<div class="grayBlock rblock">
+				<img src="resources/book.png" id="hand"/>
+				<img src="resources/towel.png" id="hand"/>
+				<div id="bricks">
+					<img src="resources/brick.jpg" class="brick"/>
+					<img src="resources/brick.jpg" class="brick"/>
+				</div>
+			</div>
+			<div class="greenBlock">
+				<p>Vous <span id="enterez">entrez</span> alors dans une grande piece remplie d'<span id="ordinateurs">ordinateurs</span>...</p>
+		
+				<p id="italic">- Bonjour, vous êtes nouveau ici ?</p>
+				
+				<form>
+					<input type="text" id="formtext">
+					<input type="submit" value="Repondre" id="repondre">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+body
+{
+	background-color: #4589e0;
+	color: rgb(233, 112, 112);
+}
+li
+{
+	background: red;
+	display: block;
+	float: left;
+	padding: 15px;
+	position: relative;
+	text-decoration: none;
+	border-radius:1vw;
+	-moz-border-radius:1vw;
+}
+ul
+{
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+a, li a
+{
+	text-decoration: none;
+	color: white;
+	background-color: inherit;
+}
+ul li ul
+{
+	color: inherit;
+	background: red;;
+	visibility: hidden;
+	position: absolute;
+	margin-top: 15px;
+	display: none;
+	left: 0.4vw;
+} 
+ul li:hover > ul, ul li ul:hover
+{
+	visibility: visible;
+	opacity: 1;
+	display: block;
+	border-radius:1vw;
+	-moz-border-radius:1vw;
+}
+ul li ul li
+{
+	clear: both;
+	width: 100%;
+	color: white;
+	background-color: red;
+}
+ul li ul li ul
+{
+	left: 100%;
+	top: -15px;
+	width: 100%;
+	color: white;
+	background-color: red;
+}
+nav
+{
+	font-family: "Courier New", monospace;
+}

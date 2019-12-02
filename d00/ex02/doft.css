@@ -1,0 +1,148 @@
+body
+{
+	position: relative;
+	min-width: 1980px;
+	min-height: 1080px;
+	color: black;
+	background-color: #545454;
+}
+.top
+{
+	width: 1400px;
+	height: 120px;
+	border: 10px;
+	border-style: solid;
+	border-color: #909090;
+	color: black;
+	background-color: #909090;
+	border-radius: 10px;
+	box-shadow: 12px 12px 12px black;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.middle
+{
+	display: inline-block;
+	width: 70%;
+	height: 50%;
+	margin-left: 15%;;
+	margin-top: 2%;
+}
+#img_on_top
+{
+	float: left;
+	height: 120px;
+}
+#ordinateurs
+{
+	text-shadow: 5px 5px 5px red;
+}
+#formtext
+{
+	width: 65%;
+	height: 10%;
+	display: inline-block;
+	margin-top: 1%;
+	font-size: 0.8vw;
+}
+.greenBlock
+{
+	display: inline-block;
+	background-color: #98FB98;
+	width: 36%;
+	height: auto;
+	z-index: 4;
+	margin-top: -6%;
+	margin-left: -6%;
+	box-shadow: 10px 10px 5px black;
+	border-radius: 10px;
+	padding: 1%;
+	padding-bottom: 5%;
+}
+#enterez
+{
+	font-size: 2vw;
+	font-family: Georgia;
+}
+#italic
+{
+	font-style: italic;
+}
+#loop
+{
+	float: left;
+	margin-left: 659px;
+}
+.refresh_disney
+{
+	height: 20px;
+	width: 20px;
+	float: right;
+}
+.grayBlock
+{
+	background-color: rgb(144, 144, 144);
+	box-shadow: 10px 10px 5px black;
+	border-radius: 10px;
+}
+.lblock
+{
+	width: 8%;
+	height: auto;
+	padding: 1%;
+	float: left;
+	padding-bottom: 2%;
+}
+#hand
+{
+	display:block;
+  	width:60%;
+  	margin:auto;
+  	margin-top:10%;
+}
+#handSelected
+{
+	display:block;
+  	width:60%;
+  	margin:auto;
+	  margin-top:10%;
+	  border: 5px solid red;
+    border-radius: 5px;
+}
+.brick
+{
+    display: block;
+    width: 30%;
+    visibility: hidden;
+}
+#bricks
+{
+	display: block;
+	background : url("resources/brick.jpg");
+	background-size: 28%;
+	background-repeat: repeat;
+}
+.rblock
+{
+	width: 8%;
+	height: auto;
+	padding: 1%;
+	float: right;
+	margin-left: 1%;
+	padding-bottom: 13%;
+}
+.content
+{
+    margin: 0px 0 0 30px;
+    width: 1020px;
+    height: 582px;
+    float: left;
+	z-index: 2;
+}
+.content img
+{
+    margin: 10px;
+    width: 1000px;
+	height: 562px;
+}
