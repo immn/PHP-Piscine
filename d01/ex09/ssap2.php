@@ -1,8 +1,7 @@
+#!/usr/bin/php
 <?php
-
-	function compare($a, $b)
+	function ft_compare($a, $b)
 	{
-		
 		$line = "abcdefghijklmnopqrstuvwxyz0123456789!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 		$i = 0;
 		while ($i < strlen($a) && $i < strlen($b))
@@ -29,7 +28,7 @@
 				$arr = array_merge($arr, $temp);
 		}
 	}
-	usort($arr, "compare");
+	usort($arr, "ft_compare");
 	foreach ($arr as $elem)
 		echo "$elem"."\n";
 ?>

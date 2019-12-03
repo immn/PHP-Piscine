@@ -1,6 +1,5 @@
 #!/usr/bin/php
 <?php
-
 	function sAverage($arr)
 	{
 		$grade = 0;
@@ -51,10 +50,8 @@
 				echo "$eleml".":"."$num"."\n";
 		}
 	}
-
 	if ($argc != 2)
 		return (0);
-
 	$arr = file('php://stdin');
 	unset($arr[0]);
 	
@@ -67,9 +64,7 @@
 	}
 
 	if ($argv[1] == "average_user")
-	{
 		sAverageUser($arr);
-	}
 
 	if ($argv[1] == "moulinette_variance")
 	{
