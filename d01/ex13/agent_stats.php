@@ -24,7 +24,6 @@
 	function sAverageUser($arr)
 	{
 		asort($arr);
-
 		foreach ($arr as $elem)
 		{
 			$temp = explode(";", $elem);
