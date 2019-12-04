@@ -19,6 +19,5 @@
 			else
 				echo "'" . $num . "' is not a number\n";
 		}
-		
 	}
 ?>
