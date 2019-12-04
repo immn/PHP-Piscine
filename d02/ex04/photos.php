@@ -1,72 +1,76 @@
 #!/usr/bin/php
 <?php
-    dl("php_curl.dll");
-    function getHtml($url)
-    {
-        echo"url"." $url"."\n";
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        $html = curl_exec($curl);
-        echo"html"." $html"."\n";
-        curl_close($curl);
-        return ($html);
-    }
+if ($argc == 2)
+{
+	$folder = str_replace('https://', '', $argv[1]);
+	$folder = str_replace('http://', '', $folder);
+	$url = $argv[1];
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_FAILONERROR, 1);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+	$str = curl_exec($ch);
+	$arr = array();
+	preg_match_all("/<img[^>]+.svg/i", $str, $matches);
+	$arr = array_merge($arr, $matches[0]);
+	preg_match_all("/<img[^>]+.png/i", $str, $matches);
+	$arr = array_merge($arr, $matches[0]);
+	preg_match_all("/<img[^>]+.jpeg/i", $str, $matches);
+	$arr = array_merge($arr, $matches[0]);
+	preg_match_all("/<img[^>]+.jpg/i", $str, $matches);
+	$arr = array_merge($arr, $matches[0]);
+	preg_match_all("/<img[^>]+.gif/i", $str, $matches);
+	$arr = array_merge($arr, $matches[0]);
+	preg_match_all("/<img[^>]+.ico/i", $str, $matches);
+	$arr = array_merge($arr, $matches[0]);
+	preg_match_all("/<img[^>]+.apng/i", $str, $matches);
+	$arr = array_merge($arr, $matches[0]);
+	preg_match_all("/<img[^>]+.bmp/i", $str, $matches);
+	$arr = array_merge($arr, $matches[0]);
 
-    function getImgs($html, $url)
-    {
-        preg_match_all("/<img[^>]+src=([^\s>]+)/i", $html, $matches);
-        foreach ($matches[1] as $k => $v){
-            $matches[1][$k] = trim($v, "\"");
-            if (!preg_match("/^http(s?):\/\//", $matches[1][$k]))
-            {
-                if (preg_match("/^\//", $matches[1][$k]))
-                {
-                    preg_match("/^(http(s?):\/\/)([^\/]+)/", $url, $urlMatches);
-                    $matches[1][$k] = $urlMatches[1]."".$urlMatches[3]."".$matches[1][$k];
-                }
-                else
-                    $matches[1][$k] = $url."".$matches[1][$k];
-            }
-        }
-        return ($matches);
-    }
-
-    function createFolder($url){
-        $url = preg_replace("/^.*?:\/\//", '', $url);
-        if (file_exists($url) && is_dir($url))
-            return ($url);
-        mkdir($url);
-        return ($url);
-    }
-
-    function getName($img)
-    {
-        preg_match("/^.*?([^\/]+)$/", $img, $matches);
-        if (substr($matches[1], -1) === "\"" || substr($matches[1], -1) === "'")
-            return (substr($matches[1], 0, -1));
-        return ($matches[1]);
-    }
-
-    function downloadImg($imgs, $folder) {
-        foreach ($imgs[1] as $img) {
-            $curl = curl_init($img);
-            curl_setopt($curl, CURLOPT_HEADER, 0);
-            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($curl, CURLOPT_BINARYTRANSFER,1);
-            $raw = curl_exec($curl);
-            curl_close ($curl);
-            $fp = fopen($folder."/".getName($img),'w');
-            fwrite($fp, $raw);
-            fclose($fp);
-        }
-    }
-
-    if ($argc < 1)
-        exit();
-    $html = getHtml($argv[1]);
-    if (!empty($html)){
-        $imgs = getImgs($html, $argv[1]);
-        $folder = createFolder($argv[1]);
-        downloadImg($imgs, $folder);
-    }
+	if (count($arr) == 0)
+		return null;
+	foreach ($arr as $pic)
+	{
+		$temp[] = substr($pic, strrpos($pic, '"') + 1);
+	}
+	if (count($temp) == 0)
+		return null;
+	foreach ($temp as $link)
+	{
+		if ($link[0] == '/' && $link != "")
+			$final[] = $argv[1].$link;
+		else if ($link != "")
+			$final[] = $link;
+	}
+	if (count($final) == 0)
+		return null;
+	else
+	{
+		if (!file_exists($folder))
+		{
+			mkdir($folder, 0755, true);
+		}
+		foreach ($final as $image)
+		{
+			$ch = curl_init ($image);
+			curl_setopt($ch, CURLOPT_HEADER, 0);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_TIMEOUT, 2);
+			$rawdata=curl_exec($ch);
+			curl_close ($ch);
+			$name = substr($image, strrpos($image, '/') + 1);
+			if (!file_exists("$folder/$name"))
+			{
+				$fp = fopen("$folder/$name",'x');
+				fwrite($fp, $rawdata);
+				fclose($fp);
+			}
+		}
+	}
+}
+else
+	return null;
 ?>
