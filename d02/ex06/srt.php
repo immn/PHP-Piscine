@@ -29,7 +29,6 @@
 	$index = 0;
 	$i = 0;
 	$len = count($array);
-
 	while ($i < $len)
 	{
 		if (ft_is_time($array[$i])) 

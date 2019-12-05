@@ -20,6 +20,7 @@
 		curl_setopt($ch, CURLOPT_FAILONERROR, 1);
 		curl_setopt($ch, CURLOPT_TIMEOUT, 20);
 		$str = curl_exec($ch);
+		echo($str);
 		$arr = array();
 		preg_match_all("/<img[^>]+.svg/i", $str, $matches);
 		$arr = array_merge($arr, $matches[0]);
@@ -43,16 +44,13 @@
 			echo"Error\n";
 			exit();
 		}
-		print_r($arr);
 		foreach ($arr as $pic)
 			$temp[] = substr($pic, strrpos($pic, '"') + 1);
-		print_r($temp);
 		if (count($temp) == 0)
 		{
 			echo"Error\n";
 			exit();
 		}
-
 		foreach ($temp as $link)
 		{
 			if ($link[0] == '/' && $link != "")
@@ -60,7 +58,6 @@
 			else if ($link != "")
 				$final[] = $link;
 		}
-		print_r($final);
 		if (count($final) == 0)
 		{
 			echo"Error\n";
@@ -84,13 +81,6 @@
 				$fp = fopen($folder."/".getName($image),'x');
 				fwrite($fp, $rawdata);
 				fclose($fp);
-				// $name = substr($image, strrpos($image, '/') + 1);
-				// if (!file_exists("$folder/$name"))
-				// {
-				// 	$fp = fopen("$folder/$name",'x');
-				// 	fwrite($fp, $rawdata);
-				// 	fclose($fp);
-				// }
 			}
 		}
 	}
