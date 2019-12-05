@@ -4,37 +4,36 @@
         exit();
     if (!file_exists($argv[1]))
         exit();
-    $read = fopen($argv[1], 'r');
-    
-    while ($read && !feof($read))
-        $array[] = explode(";", fgets($read));
+    $rc = fopen($argv[1], 'r');
+    while ($rc && !feof($rc))
+        $farray[] = explode(";", fgets($rc));
 
-    $header = $array[0];
-    unset($array[0]);
+    $aKeys = $farray[0];
+    unset($farray[0]);
+    foreach ($aKeys as $key => $value)
+        $aKeys[$key] = trim($value);
 
-    foreach ($header as $k => $v)
-        $header[$k] = trim($v);
-
-    $index = array_search($argv[2], $header);
+    $index = array_search($argv[2], $aKeys);
     if ($index === false)
         exit();
-
-    foreach ($header as $header_k => $header_v){
-        $tmp = array();
-        foreach ($array as $v) {
-            if (isset($v[$index]))
-                $tmp[trim($v[$index])] = trim($v[$header_k]);
+    foreach ($aKeys as $aKeys_key => $aKeys_value)
+    {
+        $temp = array();
+        foreach ($farray as $fvalue)
+        {
+            if (isset($fvalue[$index]))
+                $temp[trim($fvalue[$index])] = trim($fvalue[$aKeys_key]);
         }
-        $$header_v = $tmp;
+        $$aKeys_value = $temp;
     }
 
     $stdin = fopen("php://stdin", "r");
-    while ($stdin && !feof($stdin)) {
+    while ($stdin && !feof($stdin))
+    {
         echo "Entrez votre commande: ";
         $order = fgets($stdin);
-        if ($order) {
+        if ($order)
             eval($order);
-        }
     }
     fclose($stdin);
     echo "\n";
