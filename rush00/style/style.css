@@ -124,6 +124,17 @@ a:-webkit-any-link
     -webkit-border-radius: 4px;
     white-space: nowrap;
 }
+#content .gallery .post .price a
+{
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    padding: 2px 4px 2px 5px;
+    background-color: rgb(57, 115, 59);
+    border: 1px #ccc solid;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+	white-space: nowrap;
+}
 #content .gallery .post .catlabel a:hover {
     color: #00aaff;
 }
@@ -188,6 +199,15 @@ content .gallery .post .icon .iconscale img {
     font-size: 18px;
     margin-left: 6px;
     margin-top: 6px;
+}
+#content .gallery .post .price {
+    z-index: 30;
+    position: absolute;
+    width: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    margin-left: 12%;
+    margin-top: 15%;
 }
 a:hover {
     color: #00aaff;
