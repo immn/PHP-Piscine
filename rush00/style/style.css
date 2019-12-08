@@ -73,7 +73,9 @@ body
 }
 #imgOnOff
 {
-    height: 3vw;
+	height: 3vw;
+	margin-left: 50px;
+	margin-top: 6px;
 }
 
 body #autocenterbox
@@ -209,6 +211,9 @@ content .gallery .post .icon .iconscale img {
     margin-left: 160px;
     margin-top: 190px;
 }
+#mute{
+	margin-left: 160px;
+}
 a:hover {
     color: #00aaff;
 }
@@ -237,6 +242,42 @@ header div.logo img {
 
 header div.menu a {
     margin: 0 10px;
+}
+#content .contactus {
+    display: block;
+    float: left;
+    width: 417px;
+    padding: 12px;
+	margin-bottom: 24px;
+	font-size: 20px;
+}
+
+#content, #single {
+    display: table;
+    width: auto;
+    padding: 24px 24px 24px 24px;
+    clear: left;
+	background: rgb(85, 131, 154);
+	border-radius: 20px;
+}
+#content .whoweare {
+    color: #dfb946;
+    background-color: rgb(18, 66, 90);
+    width: auto;
+    clear: left;
+    padding: 36px;
+    margin-bottom: 24px;
+}
+#content .games {
+    color: #dfb946;
+    background-color: rgb(18, 66, 90);
+    width: auto;
+    clear: left;
+    padding: 15px;
+	margin-bottom: 0px;
+	border-radius: 20px;
+	font-size: 30px;
+	text-align: center;
 }
 
 footer {

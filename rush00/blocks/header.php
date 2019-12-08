@@ -8,7 +8,7 @@
 		|
 		<a href="category.php" id="amenu">Category</a> 
 		|
-		<a href="index.php" id="amenu">About</a> 
+		<a href="about.php" id="amenu">About</a> 
 	</div>
 	<div class="basket">
 		<a href="basket.php" id="basket">

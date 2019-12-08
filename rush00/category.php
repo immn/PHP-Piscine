@@ -1,9 +1,7 @@
 <?php
     session_start();
 
-    include('blocks/header.php'); ?>
-<div id = "autocenterbox">
-<div id="content">
+	include('blocks/header.php'); ?>
 	<audio id="melody" autoplay="autoplay">
 		<source src="music\spiderman.mp3">
 	</audio>
@@ -29,8 +27,12 @@
 			} 
 		}
 	</script>
+<div id = "autocenterbox">
+<div id="content">
+	
 
 	<div class="gallery">
+	<div class="games"><strong>Categories</strong></div>
 	<br>
 	<br>
 		<?php include("category-table.php") ?>

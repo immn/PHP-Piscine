@@ -1,10 +1,7 @@
 <?php
-    session_start();
-
-    include('blocks/header.php'); ?>
-<div id = "autocenterbox">
-<div id="content">
-	<audio id="melody" autoplay="autoplay">
+	session_start();
+	include('blocks/header.php'); ?>
+	<audio id="melody" autoplay>
 		<source src=<?php
 						echo isset($_GET['category']) ? "/"."music/".$_GET['category'].".mp3":"/music/ghostnusters.mp3";
 					?>>
@@ -31,8 +28,12 @@
 			} 
 		}
 	</script>
+<div id = "autocenterbox">
+<div id="content">
+	
 
 	<div class="gallery">
+	<div class="games"><strong>Retro-Games Store</strong></div>
 	<br>
 	<br>
 		<?php include("shop-table.php") ?>
