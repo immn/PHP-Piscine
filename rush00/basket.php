@@ -40,6 +40,19 @@
 	</div>
 </div>
 </div>
+<div id = "autocenterbox">
+<div id="content">
+	
+
+	<div class="gallery">
+	<div class="games"><strong>Total</strong></div>
+	<br>
+	<br>
+		<?php include("basket-list.php") ?>
+		<button type="submit" class="submit">Buy It!</button>
+	</div>
+</div>
+</div>
 
 
 <!-- </body> -->
