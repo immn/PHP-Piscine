@@ -27,6 +27,10 @@ header div.menu {
 	text-decoration: none;
 	
 }
+#amenu:hover {
+    opacity:.85;
+    cursor: pointer;
+}
 #basket
 {
 	text-decoration: none;
@@ -76,6 +80,10 @@ body
 	height: 3vw;
 	margin-left: 50px;
 	margin-top: 6px;
+}
+#imgOnOff:hover {
+    opacity:.85;
+    cursor: pointer;
 }
 
 body #autocenterbox
@@ -239,9 +247,47 @@ header div.logo img {
 }
 
 
-
+#content .text{
+	text-align: left;
+}
 header div.menu a {
     margin: 0 10px;
+}
+.contact_form input {
+    height:20px;
+    width:220px;
+	padding:5px 8px;
+	border-radius: 10px;
+}
+button.submit {
+    background-color: #68b12f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+    background: -webkit-linear-gradient(top, #68b12f, #50911e);
+    background: -moz-linear-gradient(top, #68b12f, #50911e);
+    background: -ms-linear-gradient(top, #68b12f, #50911e);
+    background: -o-linear-gradient(top, #68b12f, #50911e);
+    background: linear-gradient(top, #68b12f, #50911e);
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+	text-shadow: 0 -1px 0 #396715;
+}
+button.submit:hover {
+    opacity:.85;
+    cursor: pointer;
 }
 #content .contactus {
     display: block;
