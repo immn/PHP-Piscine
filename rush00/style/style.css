@@ -146,6 +146,17 @@ a:-webkit-any-link
     -webkit-border-radius: 4px;
 	white-space: nowrap;
 }
+#content .gallery .post .adm a
+{
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    padding: 2px 4px 2px 5px;
+    background-color: rgb(231, 63, 63);
+    border: 1px #ccc solid;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+	white-space: nowrap;
+}
 #content .gallery .post .catlabel a:hover {
     color: #00aaff;
 }
@@ -219,6 +230,15 @@ content .gallery .post .icon .iconscale img {
     font-size: 15px;
     margin-left: 160px;
     margin-top: 190px;
+}
+#content .gallery .post .adm {
+    z-index: 30;
+    position: absolute;
+    width: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    margin-left: 190px;
+    margin-top: 6px;
 }
 #mute{
 	margin-left: 160px;
