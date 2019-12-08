@@ -16,7 +16,7 @@
 							<a href=\"".$arr[$i][2]."\">".$arr[$i][1]."</a>
 						</div>
 						<div class=\"adm\">
-							<a href=\""."delete.php"."\">"."X"."</a>
+							<a href=\""."delete-item.php"."\">"."X"."</a>
 						</div>
 					</div>
 				</div>";

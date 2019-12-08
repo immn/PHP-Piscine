@@ -12,7 +12,7 @@
 		<?php include("admin-table.php") ?>
 		<div class="post">
 					<div class="icon">
-						<a class="iconscale" href="">
+						<a class="iconscale" href="new-item.php">
 						<img width="235" height="235" src="/img/new.png" class="attachment-full size-full wp-post-image" alt="">
 						</a>
 					</div>

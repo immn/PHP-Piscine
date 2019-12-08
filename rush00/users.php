@@ -6,13 +6,13 @@
 	
 
 	<div class="gallery">
-	<div class="games"><strong>Retro-Games Store</strong></div>
+	<div class="games"><strong>All Users</strong></div>
 	<br>
 	<br>
 		<?php include("admin-table-us.php") ?>
 		<div class="post">
 					<div class="icon">
-						<a class="iconscale" href="">
+						<a class="iconscale" href="new-user.php">
 						<img width="235" height="235" src="/img/new.png" class="attachment-full size-full wp-post-image" alt="">
 						</a>
 					</div>

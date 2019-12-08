@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-	include('blocks/header.php'); ?>
+	include('blocks/header-adm.php'); ?>
 	<audio id="melody" autoplay="autoplay">
 		<source src="music\spiderman.mp3">
 	</audio>
@@ -38,7 +38,7 @@
 		<?php include("category-table-adm.php") ?>
         <div class="post">
 					<div class="icon">
-						<a class="iconscale" href="\">
+						<a class="iconscale" href="new-category.php">
 						<img width="235" height="235" src="/img/new.png" class="attachment-full size-full wp-post-image" alt="">
 						</a>
 						<div class="catlabel">
