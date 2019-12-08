@@ -1,5 +1,5 @@
 <?php
-	$arr = file('db\categories.csv');
+	$arr = file('db/categories.csv');
 	unset($arr[0]);
 	$i = 0;
 	$ln = count($arr);

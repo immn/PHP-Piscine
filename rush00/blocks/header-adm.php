@@ -6,7 +6,7 @@
     <div class="col-l-6  menu">
 		<a href="index.php" id="amenu">Home</a> 
 		|
-		<a href="category.php" id="amenu">Category</a> 
+		<a href="category-adm.php" id="amenu">Category</a> 
 		|
 		<a href="users.php" id="amenu">Users</a>
 	</div>
