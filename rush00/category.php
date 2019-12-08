@@ -5,9 +5,7 @@
 <div id = "autocenterbox">
 <div id="content">
 	<audio id="melody" autoplay="autoplay">
-		<source src=<?php
-						echo isset($_GET['category']) ? "/"."music/".$_GET['category'].".mp3":"/music/ghostnusters.mp3";
-					?>>
+		<source src="music\spiderman.mp3">
 	</audio>
 	<img id="imgOnOff" src="img\on.png" alt="Вкл/выкл звук" onclick="Mute()">
 	
@@ -35,7 +33,7 @@
 	<div class="gallery">
 	<br>
 	<br>
-		<?php include("shop-table.php") ?>
+		<?php include("category-table.php") ?>
 	</div>
 </div>
 </div>
