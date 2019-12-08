@@ -33,7 +33,7 @@
 	<div class="gallery">
 	<br>
 	<br>
-		<div class="post">
+		<!-- <div class="post">
 			<div class="icon">
 				<a class="iconscale" href="">
 					<img width="432" height="432" src="img\giphy (11).gif" class="attachment-full size-full wp-post-image" alt="">
@@ -190,11 +190,13 @@
 					<a href="">Stranger Things</a>
 				</div>
 			</div>
-		</div>
-		
+		</div> -->
+		<?php include("shop-table.php") ?>
 	</div>
 </div>
 </div>
+
+
 <!-- </body> -->
 <?php include('blocks/footer.php'); ?>
 
