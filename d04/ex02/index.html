@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change password</title>
+</head>
+<body>
+    <fieldset>
+    <form action="modif.php" method="POST">
+    	<p>
+			<label for="login">
+				login:
+			</label>
+			<br>
+			<input type="text" id="login" name = "login" value = "" autofocus>
+		</p>
+    	<p>
+			<label for="password">
+				old password:
+			</label>
+			<br>
+			<input type="password" id="password" name="oldpw" value="" >
+		</p>
+		<p>
+			<label for="password">
+				new password:
+			</label>
+			<br>
+			<input type="password" id="password" name="newpw" value="" >
+		</p>
+        <input type="submit" name="submit" value="OK"/>
+    </form>
+    <!--<a href="modif.html"></a>-->
+    </fieldset>
+</body>
+</html>
