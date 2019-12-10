@@ -1,0 +1,6 @@
+pic;category;link;age
+img\arcade.gif;#arcade;index.php?category=arcade;4+
+img\adventure.gif;#adventure;index.php?category=adventure;4+
+img\build.gif;#build;index.php?category=build;6+
+img\horror.gif;#horror;index.php?category=horror;18+
+img\shooter.gif;#shooter;index.php?category=shooter;18+
