@@ -1,1 +1,1 @@
-CREATE DATABASE db_kgarth_o;
+CREATE DATABASE `db_kgarth-o`;
