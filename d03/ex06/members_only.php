@@ -1,11 +1,11 @@
 <?php
-    $a_k = array_keys($_SERVER);
-    $auth_user = "";
-    $auth_pass = "";
-    if (array_search("PHP_AUTH_USER" ,$a_k) !== false)
-        $auth_user = $_SERVER["PHP_AUTH_USER"];
-    if (array_search("PHP_AUTH_PW" ,$a_k) !== false)
-        $auth_pass = $_SERVER["PHP_AUTH_PW"];
+	$a_k = array_keys($_SERVER);
+	$auth_user = "";
+	$auth_pass = "";
+	if (array_search("PHP_AUTH_USER" ,$a_k) !== false)
+		$auth_user = $_SERVER["PHP_AUTH_USER"];
+	if (array_search("PHP_AUTH_PW" ,$a_k) !== false)
+		$auth_pass = $_SERVER["PHP_AUTH_PW"];
 	if ($auth_user == "zaz" &&
 	$auth_pass == "jaimelespetitsponeys")
 	{

@@ -108,13 +108,13 @@ body
   	margin:auto;
 	  margin-top:10%;
 	  border: 5px solid red;
-    border-radius: 5px;
+	border-radius: 5px;
 }
 .brick
 {
-    display: block;
-    width: 30%;
-    visibility: hidden;
+	display: block;
+	width: 30%;
+	visibility: hidden;
 }
 #bricks
 {
@@ -134,15 +134,15 @@ body
 }
 .content
 {
-    margin: 0px 0 0 30px;
-    width: 1020px;
-    height: 582px;
-    float: left;
+	margin: 0px 0 0 30px;
+	width: 1020px;
+	height: 582px;
+	float: left;
 	z-index: 2;
 }
 .content img
 {
-    margin: 10px;
-    width: 1000px;
+	margin: 10px;
+	width: 1000px;
 	height: 562px;
 }

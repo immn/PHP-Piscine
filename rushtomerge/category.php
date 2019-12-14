@@ -1,5 +1,5 @@
 <?php
-    session_start();
+	session_start();
 
 	include('blocks/header.php'); ?>
 	<audio id="melody" autoplay="autoplay">

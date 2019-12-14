@@ -1,5 +1,5 @@
 <?php
-    session_start();
+	session_start();
 
 	include('blocks/header-adm.php'); ?>
 	<audio id="melody" autoplay="autoplay">
@@ -36,7 +36,7 @@
 	<br>
 	<br>
 		<?php include("category-table-adm.php") ?>
-        <div class="post">
+		<div class="post">
 					<div class="icon">
 						<a class="iconscale" href="new-category.php">
 						<img width="235" height="235" src="/img/new.png" class="attachment-full size-full wp-post-image" alt="">

@@ -1,138 +1,138 @@
 body 
 {
-    width: 100%;
-    font-family: "Courier New";
+	width: 100%;
+	font-family: "Courier New";
 }
 table 
 {
-    border-collapse: collapse;
-    width: 97%;
-    margin-left:auto;
-    margin-right:auto;
-    height:auto;
-    border: 0.3vw solid white;
-    
+	border-collapse: collapse;
+	width: 97%;
+	margin-left:auto;
+	margin-right:auto;
+	height:auto;
+	border: 0.3vw solid white;
+	
 }
 .gradient-text 
 {
-    font-family: "Courier New";
-    font-size: 3vw;
-    background: linear-gradient(45deg, #7d2296 33%, #eba3ff 66%, #dc5cff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #0B2349;
-    display: table;
-    margin: 0.5vw auto;
-    word-spacing:-0.3vw;
+	font-family: "Courier New";
+	font-size: 3vw;
+	background: linear-gradient(45deg, #7d2296 33%, #eba3ff 66%, #dc5cff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #0B2349;
+	display: table;
+	margin: 0.5vw auto;
+	word-spacing:-0.3vw;
 }
 .gradient-text-2 
 {
-    font-family: "Courier New";
-    font-size: 3vw;
-    background: linear-gradient(45deg, #782490 33%, #511362 66%, #370f42);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #0B2349;
-    display: table;
-    margin: 0.5vw auto;
+	font-family: "Courier New";
+	font-size: 3vw;
+	background: linear-gradient(45deg, #782490 33%, #511362 66%, #370f42);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #0B2349;
+	display: table;
+	margin: 0.5vw auto;
 }
 .s-element 
 {
-    background-color: #f856da;
-    border: 0.3vw solid white;
+	background-color: #f856da;
+	border: 0.3vw solid white;
 }
 .p-element 
 {
-    background-color: #f4e738;
-    border: 0.3vw solid white;
+	background-color: #f4e738;
+	border: 0.3vw solid white;
 }
 .d-element 
 {
-    background-color: #3890f4;
-    border: 0.3vw solid white;
+	background-color: #3890f4;
+	border: 0.3vw solid white;
 }
 .f1-element 
 {
-    background-color: #07a822;
-    border: 0.3vw solid white;
+	background-color: #07a822;
+	border: 0.3vw solid white;
 }
 .f2-element 
 {
-    background-color: #047216;
-    border: 0.3vw solid white;
+	background-color: #047216;
+	border: 0.3vw solid white;
 }
 .u-element 
 {
-    background-color: #bbbbbb;
-    border: 0.3vw solid white;
+	background-color: #bbbbbb;
+	border: 0.3vw solid white;
 }
 .nbr_weight 
 {
-    margin-right: 0.3vw;
-    text-align: right;
+	margin-right: 0.3vw;
+	text-align: right;
 }
 
 td {
-    width: 5.3vw;
-    height: 4.2vw;
-    border: 1vw solid white;
-    border-radius:1vw;
-    -moz-border-radius:1vw;
+	width: 5.3vw;
+	height: 4.2vw;
+	border: 1vw solid white;
+	border-radius:1vw;
+	-moz-border-radius:1vw;
 }
 
 #hidden
 {
-    border:none;
+	border:none;
 }
 .nbr_bottom 
 {
-    margin-left: 0.1vw;
-    text-align: left;
+	margin-left: 0.1vw;
+	text-align: left;
 }
 .rus
 {
-    margin-left: 0.1vw;
-    text-align: right;
-    font-size: 0.8vws;
-    font-family: "a_FuturaRound";
+	margin-left: 0.1vw;
+	text-align: right;
+	font-size: 0.8vws;
+	font-family: "a_FuturaRound";
 }
 .rusl
 {
-    margin-left: 0.1vw;
-    text-align: left;
-    font-size: 0.8vw;
-    font-family: "a_FuturaRound";
+	margin-left: 0.1vw;
+	text-align: left;
+	font-size: 0.8vw;
+	font-family: "a_FuturaRound";
 }
 .nbr_bottomr 
 {
-    margin-left: 1vw;
-    text-align: right;
+	margin-left: 1vw;
+	text-align: right;
 }
 
 h3 
 {
-    color: #000000;
-    text-align: right;
-    margin: 0;
-    font-size: 1.4vw;
+	color: #000000;
+	text-align: right;
+	margin: 0;
+	font-size: 1.4vw;
 }
 .h3 
 {
-    color: #000000;
-    text-align: left;
-    margin: 0;
-    font-size: 1.4vw;
+	color: #000000;
+	text-align: left;
+	margin: 0;
+	font-size: 1.4vw;
 }
 .h3c
 {
-    font-family: "a_FuturaRound";
-    color: #000000;
-    text-align: center;
-    margin: 0;
-    font-size: 0.6vw;
+	font-family: "a_FuturaRound";
+	color: #000000;
+	text-align: center;
+	margin: 0;
+	font-size: 0.6vw;
 }
 p 
 {
-    font-size: 0.7vw;
-    margin: 0;
+	font-size: 0.7vw;
+	margin: 0;
 }

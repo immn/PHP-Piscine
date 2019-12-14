@@ -1,4 +1,4 @@
 DELETE
 FROM
-    ft_table
+	ft_table
 LIMIT 5;

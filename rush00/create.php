@@ -7,14 +7,14 @@
 			touch('../private/passwd');
 		$users = array();
 		if (file_get_contents('../private/passwd'))
-		    $users = unserialize(file_get_contents('../private/passwd'));
+			$users = unserialize(file_get_contents('../private/passwd'));
 		$exist = false;
 		if (count($users) > 0)
-    		foreach ($users as $user) 
-    		{
-    			if ($user['login'] === $_POST['login']) 
-    				$exist = true;
-    		}
+			foreach ($users as $user) 
+			{
+				if ($user['login'] === $_POST['login']) 
+					$exist = true;
+			}
 		if ($exist) 
 			echo "ERROR\n";
 		else 

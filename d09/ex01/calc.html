@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calc</title>
+	<style>
+		body
+		{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 12px;
+			margin-top: 32px;
+			margin: 0;
+			padding: 0 0 0 0;
+			height: 100%;
+			width: 100%;
+			display: table;
+			background-color: rgb(7, 15, 30);
+			
+		}
+		#op{
+			margin: 0px 47% 0 47%;
+		}
+		body #autocenterbox
+		{
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 20px;
+			width: 942px;
+			padding: 0;
+		}
+		#content, #single {
+			display: table;
+			width: auto;
+			padding: 24px 24px 24px 24px;
+			clear: left;
+			background: rgb(7, 15, 30);
+		}
+		#content .gallery {
+			margin: 0 -12px -6px 0;
+			display: table;
+			width: 889px;
+		}
+		#content .games {
+			color: #dfb946;
+			background-color: rgb(18, 66, 90);
+			width: auto;
+			clear: left;
+			padding: 15px;
+			margin-bottom: 0px;
+			border-radius: 20px;
+			font-size: 30px;
+			text-align: center;
+		}
+		.a {
+			height:23px;
+			width:220px;
+			padding:5px 8px;
+			border-radius: 10px;
+			margin: 0px 35% 0 35%;
+		}
+		.b {
+			height:23px;
+			width:220px;
+			padding:5px 8px;
+			border-radius: 10px;
+			margin: 0px 35% 0 35%;
+		}
+		button.submit {
+			background-color: #68b12f;
+			background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+			background: -webkit-linear-gradient(top, #68b12f, #50911e);
+			background: -moz-linear-gradient(top, #68b12f, #50911e);
+			background: -ms-linear-gradient(top, #68b12f, #50911e);
+			background: -o-linear-gradient(top, #68b12f, #50911e);
+			background: linear-gradient(top, #68b12f, #50911e);
+			border: 1px solid #509111;
+			border-bottom: 1px solid #5b992b;
+			border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			-ms-border-radius: 3px;
+			-o-border-radius: 3px;
+			box-shadow: inset 0 1px 0 0 #9fd574;
+			-webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+			-moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+			-ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+			-o-box-shadow: 0 1px 0 0 #9fd574 inset;
+			color: white;
+			font-weight: bold;
+			padding: 6px 20px;
+			text-align: center;
+			text-shadow: 0 -1px 0 #396715;
+			margin: 0px 45% 0 45%;
+		}
+		button.submit:hover {
+			opacity:.85;
+			cursor: pointer;
+		}
+
+	</style>
+	<script>
+		var res;
+		var a;
+		var b;
+		var op;
+
+		window.onload = function ()
+		{
+			res = document.querySelector(".contact_form");
+			a = document.querySelector(".a");
+			b = document.querySelector(".b");
+			op = document.querySelector("#op");
+			res.addEventListener("submit", submit);
+			setInterval("alert('Please, use me...')", 30000)
+		}
+		function submit(event)
+		{
+			if (def())
+				return false;
+			if (!validation())
+				return false;
+			a = Number(a.value);
+			b = Number(b.value);
+			if (op.value == "+")
+			{
+				res = a + b;
+				console.log(res);
+				//alert(res);
+			}
+			else if (op.value == "*")
+			{
+				res = a * b;
+				console.log(res);
+				//alert(res);
+			}
+			else if (op.value == "-")
+			{
+				res = a - b;
+				console.log(res);
+				//alert(res);
+			}
+			else if (op.value == "/")
+			{
+				if (b == 0)
+				{
+					alert("It’s over 9000!")
+					return false;
+				}
+				res = a / b;
+				console.log(res);
+				//alert(res);
+			}
+			else if (op.value == "%")
+			{
+				if (b == 0)
+				{
+					alert("It’s over 9000!")
+					return false;
+				}
+				res = a % b;
+				console.log(res);
+				//alert(res);
+			}
+			else
+				alert("Operator not found")
+					return false;
+		}
+		function validation()
+		{
+			if (a.value === "" || a.value === null || String(Number(a.value)) === "NaN")
+			{
+				alert("Error :(");
+				return false;
+			}
+			else if (b.value === "" || b.value === null || String(Number(b.value)) === "NaN")
+			{
+				alert("Error :(");
+				return false;
+			}
+			return true;
+		}
+		function def()
+		{
+			if ((a.value === "" || a.value === null) && (b.value === "" || b.value === null))
+			{
+				alert("Try me!");
+				return true;
+			}
+			return false;
+		}
+	</script>
+</head>
+<body>
+	<div id = "autocenterbox">
+		<div id="content">
+			<div class="gallery">
+				<div class="games"><strong>Best calc in your life</strong></div>
+				<form action="" class = "contact_form">
+				<br>
+					<input type="text" class="a"><br><br>
+					<select id="op">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+					</select>
+					<br>
+					<br>
+					<input type="text"  class="b"><br><br>
+					<button type="submit" class="submit" value="Try me!">OK</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

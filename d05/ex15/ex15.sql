@@ -1,6 +1,6 @@
 SELECT
-    REVERSE(SUBSTRING(phone_number, 2)) AS "rebmunenohp"
+	REVERSE(SUBSTRING(phone_number, 2)) AS "rebmunenohp"
 FROM
-    distrib
+	distrib
 WHERE
-    phone_number LIKE "05%";
+	phone_number LIKE "05%";

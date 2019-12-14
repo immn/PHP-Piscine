@@ -9,12 +9,12 @@
 				<input type="text" name="pseudo" placeholder="" value="" class="input"><br><br>
 				<div class="text"><h1>Category of Item</h1></div>
 				<!-- <input type="drop" name="password" placeholder="" class=""><br><br> -->
-                <select name="Category" class="text">
-                <option value="horror">horror</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
-                </select>
+				<select name="Category" class="text">
+				<option value="horror">horror</option>
+				<option value="saab">Saab</option>
+				<option value="fiat">Fiat</option>
+				<option value="audi">Audi</option>
+				</select>
 				<div class="text"><h1>Path on server</h1></div>
 				<input type="email" name="email" placeholder="" class=""><br><br>
 				<div class="text"><h1>Link</h1></div>

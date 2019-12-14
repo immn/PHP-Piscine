@@ -2,7 +2,7 @@
 	header('Content-type: text/plain');
 ?>
 <html>
-    <body>
-        Hello
-    </body>
+	<body>
+		Hello
+	</body>
 </html>

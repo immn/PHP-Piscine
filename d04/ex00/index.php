@@ -1,14 +1,14 @@
 <?php
-    function safe_init_by_arr($arr, $key)
-    {
-    	$temp = array_keys($arr);
-    	$namevar = "";
-    	if (array_search($key, $temp) !== false)
-    		$namevar = $arr[$key];
-    	else 
-    		$namevar = "";
-    	return ($namevar);
-    }
+	function safe_init_by_arr($arr, $key)
+	{
+		$temp = array_keys($arr);
+		$namevar = "";
+		if (array_search($key, $temp) !== false)
+			$namevar = $arr[$key];
+		else 
+			$namevar = "";
+		return ($namevar);
+	}
 	session_start();
 	$sub	= safe_init_by_arr($_GET, "submit");
 	$log	= safe_init_by_arr($_GET, "login");
@@ -22,28 +22,28 @@
 	}
 ?>
 <head>
-    <title>d04ex00</title>
+	<title>d04ex00</title>
 </head>
 <html>
-    <body>
-         <fieldset>
-        	<form action = "index.php" method="GET">
-        		<p>
-        		    <label for="login">
-        		        Username:
-        		    </label>
-        		    <br>
-        		    <input type="text" id="login" name = "login" value = "<?php echo $_SESSION['login']; ?>" autofocus>
-        	    </p>
-                <p>
-                    <label for="password">
-                        Password:
-                    </label>
-                    <br>
-                    <input type="password" id="password" name="passwd" value="<?php echo $_SESSION['passwd']; ?>" >
-                </p>
-        		<input type="submit" name="submit" value="OK" />
-            </form>
-        </fieldset>
-    </body>
+	<body>
+		 <fieldset>
+			<form action = "index.php" method="GET">
+				<p>
+					<label for="login">
+						Username:
+					</label>
+					<br>
+					<input type="text" id="login" name = "login" value = "<?php echo $_SESSION['login']; ?>" autofocus>
+				</p>
+				<p>
+					<label for="password">
+						Password:
+					</label>
+					<br>
+					<input type="password" id="password" name="passwd" value="<?php echo $_SESSION['passwd']; ?>" >
+				</p>
+				<input type="submit" name="submit" value="OK" />
+			</form>
+		</fieldset>
+	</body>
 </html>
